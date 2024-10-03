@@ -3,5 +3,7 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
+.p-menu,.p-menu .p-submenu-header{ background: none !important; border: 0px; width:100%}

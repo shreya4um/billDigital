@@ -1,5 +1,6 @@
 import { Routes } from "@angular/router";
 
+
 export const AUTH_ROUTES: Routes = [
     {
         path:'',
@@ -18,4 +19,5 @@ export const AUTH_ROUTES: Routes = [
         path:'select-account',
         loadComponent:()=> import('./signup-select-account/signup-select-account.component').then((m)=> m.SignupSelectAccountComponent)
     },
+  
 ]
