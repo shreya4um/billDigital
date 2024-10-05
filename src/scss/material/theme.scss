@@ -15,11 +15,13 @@ $billy-ngx-customer-theme: mat.define-theme((
     theme-type: light,
     primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
+    success: mat.$green-palette,
   ),
   density: (
     scale: 0,
   )
 ));
+
 
 :root {
   @include mat.all-component-themes($billy-ngx-customer-theme);

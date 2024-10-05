@@ -1,1 +1,77 @@
-<p>dashboard works!</p>
+<p-messages class="mt-0" [value]="messages" [enableService]="false"></p-messages>
+
+<div class="surface-card md:surface-ground flex justify-content-center align-items-center h-full">
+    <div class="surface-card p-4 md:shadow-2 border-round w-full">
+        <div class="mb-5">
+            <div class="grid align-items-start">
+                <!-- Current Month Header -->
+                <div class="col">
+                    <h3 class="m-0 font-bold text-2xl">Current Month</h3>
+                </div>
+
+                <!-- Button Group Section -->
+                <div class="col text-center">
+                    <p-button label="Month" [outlined]="true" severity="secondary" />
+                    <p-button label="Day"  severity="success" />
+      
+                   
+                  
+                </div>
+
+                <!-- Spend Info Section -->
+                <div class="col text-right">
+                    <h3 class="text-2xl m-0">&pound;300</h3>
+                    <span class="text-xs text-400">Spend</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="text-900 text-3xl font-medium mb-3">
+            <p-chart type="line" [data]="data" [options]="options"></p-chart>
+        </div>
+
+    
+    </div>
+</div>
+<div class="grid mt-5 ">
+ 
+    <div class="col">
+        <p-button label="Filter" icon="pi pi-filter" [outlined]="true" severity="secondary" />
+
+    </div>
+    <div class="col text-right">
+        <p-button label="Transaction"  severity="success" />
+        <p-button label="Category" [outlined]="true" severity="secondary" />
+        <p-button label="Profile" [outlined]="true" severity="secondary" />
+    
+       
+            <p-menu #menu [model]="items" [popup]="true"    />
+            <p-button severity="secondary" [outlined]="true" (onClick)="menu.toggle($event)" icon="pi pi-ellipsis-h"/>
+        
+    </div>
+</div>
+
+<p-accordion class="p-mt-4">
+    <p-accordionTab header="Closing Balance">
+      <div class="p-d-flex p-jc-between">
+        <span>Scheduled</span>
+        <span>£180.00</span>
+      </div>
+      <div class="p-d-flex p-jc-between">
+        <span>Paid</span>
+        <span>£410.00</span>
+      </div>
+    </p-accordionTab>
+
+    <p-accordionTab header="Opening Balance">
+      <div class="p-d-flex p-jc-between">
+        <span>Scheduled</span>
+        <span>£180.00</span>
+      </div>
+      <div class="p-d-flex p-jc-between">
+        <span>Paid</span>
+        <span>£410.00</span>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
