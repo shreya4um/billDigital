@@ -1,11 +1,27 @@
-<div class="flex justify-content-center w-full">
-    <p-menu [model]="items"  class="w-full">
-        <ng-template pTemplate="start" class="w-full">
-            <span class="inline-flex align-items-center gap-1 px-2 py-2">
-             <img src="../images/logo.png" alt="logo">
-            </span>
-        </ng-template>
-    </p-menu>
-
-    
-</div>
+<div class="h-4rem">
+    <img src="../images/logo.png" alt="logo" />
+  </div>
+  
+  <p-menu [model]="items" class="p-d-flex custom-menu pb-5">
+    <ng-template pTemplate="item" let-item>
+      <a
+        pRipple
+        class="flex align-items-center p-menuitem-link hover:bg-teal-100 hover:text-teal-500 border-round"
+      >
+        <span [class]="item.icon"></span>
+        <span class="ml-2">{{ item.label }}</span>
+        <p-badge *ngIf="item.badge" class="ml-auto" [value]="item.badge" />
+      </a>
+    </ng-template>
+  
+    <ng-template pTemplate="end" class="mb-5">
+      <a
+        pRipple
+        class="flex align-items-center my-5 p-2 p-menuitem-link hover:bg-teal-100 hover:text-teal-500 border-round"
+      >
+        <span class="pi pi-cog"></span>
+        <span class="ml-2">Settings </span>
+      </a>
+      <p-button label="Add Services" severity="success" icon="pi pi-plus" />
+    </ng-template>
+  </p-menu>

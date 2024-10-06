@@ -4,11 +4,12 @@ import { MenuModule } from 'primeng/menu';
 import { BadgeModule } from 'primeng/badge';
 import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [ MenuModule, BadgeModule, RippleModule, AvatarModule],
+  imports: [ MenuModule, BadgeModule, RippleModule, AvatarModule,ButtonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -17,9 +18,7 @@ export class SidebarComponent {
 
   ngOnInit() {
       this.items = [
-          {
-              separator: true
-          },
+       
           {
            
               items: [
@@ -32,32 +31,19 @@ export class SidebarComponent {
                       label: 'Bills',
                       icon: 'pi pi-arrow-right-arrow-left',
                   
-                  }
-              ]
-          },
-          {
-              items: [
+                  },
 
-                 
-                {
+            {
                   label: 'Reports',
                   icon: 'pi pi-folder',
                
-              },
-                  {
-                      label: 'Settings',
-                      icon: 'pi pi-cog',
-                     
-                  },
+              },                 
                 
               ]
           },
-          {
-              separator: true
-          }
+      
+         
       ];
   }
 }
-
-
 

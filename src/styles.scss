@@ -7,3 +7,8 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
 .p-menu,.p-menu .p-submenu-header{ background: none !important; border: 0px; width:100%}
+
+.custom-menu .p-menu {display: flex;
+    flex-direction: column; flex-wrap: wrap;
+    height: 100%; justify-content: space-between; padding-bottom: 75px;
+}
